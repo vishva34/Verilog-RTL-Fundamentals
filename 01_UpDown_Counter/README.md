@@ -1,12 +1,12 @@
-# 4-Bit Synchronous Up/Down Counter
+# Front-End RTL Design Fundamentals
 
 ## Overview
-RTL design and testbench for a 4-bit synchronous up/down counter written in Verilog. 
+This repository serves as a continuous engineering log of my front-end digital logic design projects. As an Electronics and Communication Engineering undergraduate preparing for advanced Master's studies in Integrated Circuit Design, I am undertaking an intensive, self-directed sprint to master RTL architecture, sequential logic, and hardware verification.
 
-## Architecture
-* **Synchronous Operation:** State changes are bound to the rising edge of the master clock (`posedge clk`).
-* **Asynchronous Reset:** Active-high reset clears the register to `4'b0000` instantly.
-* **Directional Control:** Signal `up_down` toggles direction (1 = Up, 0 = Down).
+## Repository Architecture (Monorepo)
+Rather than fragmenting fundamental modules into separate repositories, this monorepo demonstrates a clear progression of complexity:
+* **01_UpDown_Counter:** 4-bit synchronous counter with asynchronous reset (Completed)
+* *(Future projects like ALUs, State Machines, and Memory Controllers will be logged here)*
 
-## Verification
-Tested using Icarus Verilog (`iverilog`) and GTKWave. The testbench validates continuous increment, decrement, and mid-count asynchronous resets.
+## Verification Standard
+Every module included in this repository is fully simulated and verified using custom Verilog testbenches. Icarus Verilog (`iverilog`) is used for compilation, and waveforms are analyzed via GTKWave to ensure synthesis-ready, race-free hardware.
